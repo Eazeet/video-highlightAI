@@ -1,0 +1,13 @@
+moviepy==1.0.3
+openai==1.52.2
+protobuf==5.28.3
+ffmpeg-python
+pandas
+pytube 
+yt-dlp  
+google-cloud-speech
+
+
+
+
+

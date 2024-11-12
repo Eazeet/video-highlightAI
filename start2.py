@@ -21,11 +21,15 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 from openai import OpenAI
 from google.cloud import speech
-client = OpenAI(api_key="")
 
 load_dotenv()
+deepgram_api_key = os.getenv("DEEPGRAM_API__KEY")
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
-deepgram_client = DeepgramClient("15791dec945318687d90c5ae4c4bdd7741da64dd", DeepgramClientOptions(verbose=False))
+client = OpenAI(api_key=openai_api_key)
+
+
+deepgram_client = DeepgramClient(deepgram_api_key, DeepgramClientOptions(verbose=False))
 
 def clean_json_output(raw_output):
     cleaned_output = re.sub(r'```json\s*|\s*```', '', raw_output).strip()

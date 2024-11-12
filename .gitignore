@@ -1,0 +1,11 @@
+.venv/
+.env
+mes.txt
+highlight0.mp4
+output.m4a
+output.mp4
+output.wav
+test.py
+start.py
+.gradio/
+_pycache_/

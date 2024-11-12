@@ -3,7 +3,7 @@ import tempfile
 import os
 from typing import Tuple
 import yt_dlp
-
+from start2 import *
 class VideoProcessor:
     def __init__(self):
         self.temp_dir = tempfile.mkdtemp()
@@ -175,7 +175,6 @@ def create_interface():
                 transcript = gr.Textbox(
                     label="Transcript",
                     lines=10,
-                    readonly=True
                 )
         
         # Set up event handler
@@ -209,6 +208,7 @@ if __name__ == "__main__":
     interface = create_interface()
     interface.launch(
         share=True,
+        debug=True,
         server_name="0.0.0.0",
         server_port=7860
     )
